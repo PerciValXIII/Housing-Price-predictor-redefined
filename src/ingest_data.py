@@ -42,7 +42,7 @@ class ZipDataIngestor(DataIngestor):
     
 
 # Implement a Factory to create DataIngestors
-class DataIngestorFacotory:
+class DataIngestorFactory:
     @staticmethod
     def get_data_ingestor(filepath: str) -> DataIngestor:
         """ Return the appropriate DataIngestor based on file extension """
@@ -54,21 +54,13 @@ class DataIngestorFacotory:
     
 # Example Usage
 if __name__ == "__main__":
-    #specify the filepath
-    filepath = "/Users/percival/Work/Housing Data Project/data/archive.zip"
+    # #specify the filepath
+    # filepath = "/Users/percival/Work/Housing Data Project/data/archive.zip"
 
-    #get the appropraite  DataIngestor
-    data_ingestor = DataIngestorFacotory.get_data_ingestor(filepath)
+    # #get the appropraite  DataIngestor
+    # data_ingestor = DataIngestorFactory.get_data_ingestor(filepath)
     
-    #ingest the data and load into a dataframe 
-    df = data_ingestor.ingest(filepath)
+    # #ingest the data and load into a dataframe 
+    # df = data_ingestor.ingest(filepath)
 
-    print(df.head())
-
-
-
-
-
-            
-
-    
+    # print(df.head())
